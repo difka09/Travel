@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::post('/daftar','HomeController@Register')->name('user.register');
+
+Route::get('/home', function(){
+    return view('home');
+})->name('home');
